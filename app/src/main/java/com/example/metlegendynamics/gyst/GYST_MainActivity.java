@@ -55,7 +55,7 @@ public class GYST_MainActivity extends AppCompatActivity {
                 case 2: // assignment fragment
                     return AssignmentsFragment.newInstance(3, "assignment Page");
                 case 3: // notification fragment
-                    return AssignmentsFragment.newInstance(4, "notification Page");
+                    return NotificationsFragment.newInstance(4, "notification Page");
                 default:
                     return null;
             }
