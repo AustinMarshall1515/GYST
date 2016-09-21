@@ -32,7 +32,7 @@ public class GYST_MainActivity extends AppCompatActivity {
     }
 
     public static class MyPagerAdapter extends FragmentPagerAdapter {
-        private static int NUM_ITEMS = 3;
+        private static int NUM_ITEMS = 4;
 
         public MyPagerAdapter(FragmentManager fragmentManager) {
             super(fragmentManager);
@@ -48,12 +48,14 @@ public class GYST_MainActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             switch (position) {
-                case 0: // Fragment # 0 - This will show FirstFragment
-                    return SemesterFragment.newInstance(1, "Page # 1");
-                case 1: // Fragment # 0 - This will show FirstFragment different title
-                    return CourseFragment.newInstance(2, "Page # 2");
-                case 2: // Fragment # 1 - This will show SecondFragment
-                    return AssignmentsFragment.newInstance(3, "Page # 3");
+                case 0: // Semesters fragment
+                    return SemesterFragment.newInstance(1, "Semesters Page");
+                case 1: // Course fragment
+                    return CourseFragment.newInstance(2, "Course Page");
+                case 2: // assignment fragment
+                    return AssignmentsFragment.newInstance(3, "assignment Page");
+                case 3: // notification fragment
+                    return AssignmentsFragment.newInstance(4, "notification Page");
                 default:
                     return null;
             }
@@ -62,7 +64,18 @@ public class GYST_MainActivity extends AppCompatActivity {
         // Returns the page title for the top indicator
         @Override
         public CharSequence getPageTitle(int position) {
-            return "Page " + position;
+            switch (position) {
+                case 0: // Semesters fragment
+                    return "Semesters";
+                case 1: // Course fragment
+                    return "Courses";
+                case 2: // assignment fragment
+                    return "Assignments";
+                case 3: // notification fragment
+                    return "Notifications";
+                default:
+                    return null;
+            }
         }
 
     }
