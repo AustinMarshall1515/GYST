@@ -1,13 +1,89 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.metlegendynamics.gyst.AssignmentsFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/AssignmentsSpacer"
+        android:layout_gravity="center_horizontal"
+        android:background="#005c99" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Semester: "
+        android:id="@+id/AssignmentsTextSemester"
+        android:gravity="center_horizontal"
+        android:background="#4db8ff"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Course:"
+        android:id="@+id/AssignmentsTextCourse"
+        android:gravity="center_horizontal"
+        android:background="#0099ff"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Assignment:"
+        android:id="@+id/AssignmentsTextAssignments"
+        android:gravity="center_horizontal"
+        android:background="#4db8ff"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/AssignmentsSpacer2"
+        android:layout_gravity="center_horizontal"
+        android:background="#005c99" />
+
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/AssignmentListView"
+        android:layout_weight="50" />
 
-</FrameLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:background="#0099ff"
+        android:foregroundTint="#000000">
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/AssignmentSettings"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_alignTop="@+id/SemesterPlus"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/coloredgear" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/SemesterPlus"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/coloredplus"
+            android:layout_marginRight="20dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

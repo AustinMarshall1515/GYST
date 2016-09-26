@@ -40,8 +40,6 @@ public class SemesterFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_semester, container, false);
-        TextView tvLabel = (TextView) view.findViewById(R.id.tvTitle);
-        tvLabel.setText(page + " -- " + title);
         return view;
     }
 }

@@ -38,7 +38,7 @@ public class NotificationsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_course, container, false);
+        View view = inflater.inflate(R.layout.fragment_notifications, container, false);
         TextView tvLabel = (TextView) view.findViewById(R.id.tvTitle);
         tvLabel.setText(page + " -- " + title);
         return view;
