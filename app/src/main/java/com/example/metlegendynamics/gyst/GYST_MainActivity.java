@@ -1,5 +1,6 @@
 package com.example.metlegendynamics.gyst;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -29,6 +30,11 @@ public class GYST_MainActivity extends AppCompatActivity {
         ViewPager vpPager = (ViewPager) findViewById(R.id.container);
         adapterViewPager = new MyPagerAdapter(getSupportFragmentManager());
         vpPager.setAdapter(adapterViewPager);
+    }
+
+    public void add_semester(View view) {
+        Intent i = new Intent(this, AddSemesterActivity.class);
+        startActivity(i);
     }
 
     public static class MyPagerAdapter extends FragmentPagerAdapter {

@@ -57,7 +57,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/SemesterListView"
-        android:layout_weight="50" />
+        android:layout_weight="50"
+        android:clickable="false" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -82,7 +83,8 @@
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
             android:background="@drawable/coloredplus"
-            android:layout_marginRight="20dp" />
+            android:layout_marginRight="20dp"
+            android:onClick="add_semester" />
 
     </RelativeLayout>
 
